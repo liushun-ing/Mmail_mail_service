@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/smtp_server?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT
+    username: root
+#    password: .20010404liushun
+    password: 123456
+
+token:
+  expireDate: 108000000
+  secret: smtpserver
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*Mapper.xml
+  # 配置xml文件中用到的实体的路径
+  type-aliases-package: com.example.smtpserver.pojo
